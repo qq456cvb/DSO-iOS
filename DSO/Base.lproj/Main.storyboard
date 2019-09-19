@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XbG-I7-kDk">
+                                <rect key="frame" x="156" y="0.0" width="500" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XbG-I7-kDk" secondAttribute="height" multiplier="4:3" id="fYk-Qf-n4a"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLE-cN-0Nb">
+                                <rect key="frame" x="44" y="324" width="32" height="30"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="onStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZS-a1-LiR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HH6-wn-wCy">
+                                <rect key="frame" x="704" y="324" width="44" height="30"/>
+                                <state key="normal" title="toggle"/>
+                                <connections>
+                                    <action selector="onToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zQI-Ne-mKf"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06T-tZ-aWK">
+                                <rect key="frame" x="156" y="0.0" width="500" height="375"/>
+                            </imageView>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mpc-jt-Wfs">
+                                <rect key="frame" x="156" y="0.0" width="500" height="375"/>
+                            </sceneKitView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mpc-jt-Wfs" firstAttribute="centerY" secondItem="XbG-I7-kDk" secondAttribute="centerY" id="68Q-rl-BAn"/>
+                            <constraint firstItem="XbG-I7-kDk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="6P1-Tv-BOc"/>
+                            <constraint firstItem="06T-tZ-aWK" firstAttribute="leading" secondItem="XbG-I7-kDk" secondAttribute="leading" id="9u2-uo-n7w"/>
+                            <constraint firstItem="XbG-I7-kDk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cLE-cN-0Nb" secondAttribute="trailing" constant="8" symbolic="YES" id="KFf-VC-Z1a"/>
+                            <constraint firstItem="06T-tZ-aWK" firstAttribute="width" secondItem="06T-tZ-aWK" secondAttribute="height" multiplier="4:3" id="NCm-UG-VZR"/>
+                            <constraint firstItem="Mpc-jt-Wfs" firstAttribute="height" secondItem="06T-tZ-aWK" secondAttribute="height" id="PgP-kV-iB7"/>
+                            <constraint firstItem="Mpc-jt-Wfs" firstAttribute="centerX" secondItem="06T-tZ-aWK" secondAttribute="centerX" id="R2J-Zr-EfR"/>
+                            <constraint firstItem="06T-tZ-aWK" firstAttribute="top" secondItem="XbG-I7-kDk" secondAttribute="top" id="RZk-Vd-fzW"/>
+                            <constraint firstItem="XbG-I7-kDk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="S3n-a0-CGU"/>
+                            <constraint firstItem="HH6-wn-wCy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="T7T-q0-ZRX"/>
+                            <constraint firstItem="06T-tZ-aWK" firstAttribute="bottom" secondItem="XbG-I7-kDk" secondAttribute="bottom" id="TqJ-H1-Fqf"/>
+                            <constraint firstItem="cLE-cN-0Nb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Tvp-4A-58o"/>
+                            <constraint firstItem="HH6-wn-wCy" firstAttribute="baseline" secondItem="cLE-cN-0Nb" secondAttribute="baseline" id="dBo-FH-2SI"/>
+                            <constraint firstItem="Mpc-jt-Wfs" firstAttribute="width" secondItem="06T-tZ-aWK" secondAttribute="width" id="q3U-Ud-NVy"/>
+                            <constraint firstItem="XbG-I7-kDk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qoB-wE-5FU"/>
+                            <constraint firstItem="HH6-wn-wCy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XbG-I7-kDk" secondAttribute="trailing" constant="8" symbolic="YES" id="rt7-KU-sT3"/>
+                            <constraint firstItem="cLE-cN-0Nb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="seT-KF-zi7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="depthView" destination="06T-tZ-aWK" id="uEq-4e-hl1"/>
+                        <outlet property="imageView" destination="XbG-I7-kDk" id="i1v-xN-5l1"/>
+                        <outlet property="scnView" destination="Mpc-jt-Wfs" id="ET1-6D-8xs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129.31034482758622" y="128.80000000000001"/>
+        </scene>
+    </scenes>
+</document>

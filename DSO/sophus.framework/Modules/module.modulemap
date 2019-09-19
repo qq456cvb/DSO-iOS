@@ -1,0 +1,6 @@
+framework module sophus {
+  umbrella header "sophus.h"
+
+  export *
+  module * { export * }
+}
